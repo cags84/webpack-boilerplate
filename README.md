@@ -33,7 +33,7 @@ Instalan las dependencias con el siguiente comando.
 
 ## Modo debug
 
-Puedes comenzar a trabajar con tu proyecto.
+Puedes comenzar a trabajar con tu proyecto, puedes abrir con el editor de su preferencia, la carpeta donde esta la estructura para editar este en el `./src`.
 
 ```sh
 - src
@@ -62,7 +62,7 @@ Para hacer un build de tu aplicación para subirla a producción solo hace falta
 > npm run build
 ```
 
-Lo cual creara una carpeta ./dist con todos los archivos optimizados listo para producción.
+Lo cual creara una carpeta `./dist` con todos los archivos optimizados listo para producción.
 
 :) exitos.
 
@@ -70,6 +70,6 @@ Lo cual creara una carpeta ./dist con todos los archivos optimizados listo para 
 
 Para realizar este proyecto me apoye en la siguiente documentarción.
 
-(Curso de Webpack - jonmircha)[https://www.youtube.com/watch?v=-bp3q-YTr4Q&t=7759s]
-(React.js | Configuración con Webpack 5 y Babel 7 - 2021 Tutorial)[https://www.youtube.com/watch?v=97Ajv8-NRVY&t=704s]
-(WebPack docs)[https://webpack.js.org/concepts/]
+- [Curso de Webpack - jonmircha](https://www.youtube.com/watch?v=-bp3q-YTr4Q&t=7759s)
+- [React.js | Configuración con Webpack 5 y Babel 7 - 2021 Tutorial](https://www.youtube.com/watch?v=97Ajv8-NRVY&t=704s)
+- [WebPack docs](https://webpack.js.org/concepts/)
