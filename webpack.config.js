@@ -7,7 +7,7 @@ const path = require('path');
 module.exports = {
   entry: './src/assets/js/app.ts',
   output: {
-    filename: "assets/js/[name].[contenthash].js",
+    filename: 'assets/js/[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
@@ -18,8 +18,8 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      inject: 'body'
-    })
+      inject: 'body',
+    }),
   ],
   module: {
     rules: [
@@ -29,53 +29,55 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              publicPath: "./",
+              publicPath: './',
             },
           },
-          "css-loader",
-          "postcss-loader",
-          "sass-loader"
+          'css-loader',
+          'postcss-loader',
+          'sass-loader',
         ],
       },
       {
         test: /\.m?jsx?$/i,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
-          }
-        }
+            presets: ['@babel/preset-env'],
+          },
+        },
       },
       {
         test: /\.html$/i,
         use: [
           {
-            loader: "html-loader",
-            options: { minimize: true }
-          }
-        ]
+            loader: 'html-loader',
+            options: { minimize: true },
+          },
+        ],
       },
       {
         test: /\.(jpe?g|png|gif|svg|webp)$/i,
         use: [
           {
-            loader: "file-loader",
+            loader: 'file-loader',
             options: {
-              name: 'assets/img/[name].[contenthash].[ext]'
-            }
+              name: 'assets/img/[name].[contenthash].[ext]',
+            },
           },
-          "image-webpack-loader"
-        ]
+          'image-webpack-loader',
+        ],
       },
       {
         test: /\.(woff|ttf)$/i,
-        use: [{
-          loader: "file-loader",
-          options: {
-            name: 'assets/fonts/[name].[contenthash].[ext]'
-          }
-        }]
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'assets/fonts/[name].[contenthash].[ext]',
+            },
+          },
+        ],
       },
       {
         test: /\.tsx?$/,
@@ -85,6 +87,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: [".js", ".jsx", ".json", ".ts", ".tsx"],
-  }
+    extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
+  },
+  devtool: 'inline-source-map',
 };
