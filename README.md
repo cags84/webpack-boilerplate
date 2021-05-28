@@ -73,3 +73,4 @@ Para realizar este proyecto me apoye en la siguiente documentarción.
 - [Curso de Webpack - jonmircha](https://www.youtube.com/watch?v=-bp3q-YTr4Q&t=7759s)
 - [React.js | Configuración con Webpack 5 y Babel 7 - 2021 Tutorial](https://www.youtube.com/watch?v=97Ajv8-NRVY&t=704s)
 - [WebPack docs](https://webpack.js.org/concepts/)
+- [Webpack 5 Full Project Setup](https://www.youtube.com/watch?v=TOb1c39m64A&t=3624s)
