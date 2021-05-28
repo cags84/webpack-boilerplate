@@ -2,6 +2,17 @@
   "recommendations": [
     "waderyan.nodejs-extension-pack",
     "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "formulahendry.auto-close-tag",
+    "formulahendry.auto-rename-tag",
+    "mikestead.dotenv",
+    "mgmcdermott.vscode-language-babel",
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "zignd.html-css-class-completion",
+    "xabikos.javascriptsnippets",
+    "ritwickdey.liveserver",
+    "gruntfuggly.todo-tree",
+    "coenraads.bracket-pair-colorizer"
   ]
 }
