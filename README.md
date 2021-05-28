@@ -1,4 +1,4 @@
-# Webpack 5 boilerplate
+# A simple Webpack 5 boilerplate
 
 Pasos para trabajar con este boilerplate.
 

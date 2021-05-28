@@ -1,11 +1,43 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const path = require('path');
+const fs = require('fs');
 
 /** @type {import('webpack').Configuration}  */
+
+let mode = 'development';
+let target = 'web';
+let devtool = '';
+let entry = '';
+const plugins = [];
+
+if (process.env.NODE_ENV === 'production') {
+  mode = 'production';
+  target = 'browserslist';
+  devtool = false;
+} else {
+  plugins.push(new ReactRefreshWebpackPlugin());
+  devtool = 'inline-source-map';
+}
+
+try {
+  if (fs.existsSync('./src/assets/js/main.ts')) {
+    entry = './src/assets/js/main.ts';
+  } else if (fs.existsSync('./src/assets/js/main.js')) {
+    entry = './src/assets/js/main.js';
+  } else {
+    throw new Error(`Error: El archivo main.[js|ts] no existe!`);
+  }
+} catch (error) {
+  console.error(error);
+}
+
 module.exports = {
-  entry: './src/assets/js/main.ts',
+  mode,
+  target,
+  entry,
   output: {
     filename: 'assets/js/[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
@@ -89,9 +121,8 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
   },
-  devtool: 'inline-source-map',
+  devtool,
   devServer: {
-    contentBase: './dist',
-    hot: true,
+    port: 8080,
   },
 };
