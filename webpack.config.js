@@ -5,7 +5,7 @@ const path = require('path');
 
 /** @type {import('webpack').Configuration}  */
 module.exports = {
-  entry: './src/assets/js/app.ts',
+  entry: './src/assets/js/main.ts',
   output: {
     filename: 'assets/js/[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),

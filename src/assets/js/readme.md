@@ -1,1 +1,1 @@
-# Soporta typescript [.ts|.tsx] o Javascript de toda la vida [.js|.jsx].
+# Soporta typescript [.ts|.tsx] o Javascript [.js], tambien react [.jsx].
